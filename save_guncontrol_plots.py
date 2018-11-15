@@ -7,20 +7,12 @@ import matplotlib
 import matplotlib.pyplot as plt
 data_dir = './data/dw_freetext/'
 
-matplotlib.rcParams['figure.figsize'] = 15,22
+matplotlib.rcParams['figure.figsize'] = 15,20
 
 
 df = pd.read_csv(data_dir+'GunControl_400.csv', delimiter='\t')
 df_filtered = df[df['Task']=='Copy_2']
 # "Copy_2" column = when they're stating true opinion, repeating (transcribing) the essay already written
-
-"""
-texts = df_filtered['ReviewText']
-with open(data_dir+'_allTexts_guncontrol.txt', 'w') as fh:
-    for text in texts:
-        fh.write(text)
-        fh.write('\n\n========================================================\n\n')
-"""
 
 phrases = ["criminal", "constitution", "amendment", "fundamental", "right", "gun", "control", "safe", "citizen", 
            "kill", "violence", "strongly", "think", "feel", "believe", "law", "police", "support", "people", "country",
