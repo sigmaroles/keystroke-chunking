@@ -22,10 +22,11 @@ def kdata2delaysOLD(typedname, rawkd, remove_outliers=False):
     
     # extract the delays (flight time after the key was pressed) for each key
     delays = np.array([list(map(lambda x, y: y-x, tstamp, tstamp[1:])) for tstamp in timestamps])
-    
     if remove_outliers:
         outlier_thresh = np.std(delays) * 3
         delays[delays>outlier_thresh] = 0
+
+    return delays
         
 """
 Input: a list of raw keystroke data(in string format)
