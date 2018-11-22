@@ -1,1 +1,1 @@
-jupyter nbconvert --to slides --post serve main_presentation.ipynb&
+jupyter nbconvert --to slides --post serve main_presentation.ipynb --SlidesExporter.reveal_theme=serif --SlidesExporter.reveal_transition=none &
