@@ -1,0 +1,1 @@
+jupyter nbconvert --to slides --post serve main_presentation.ipynb&
