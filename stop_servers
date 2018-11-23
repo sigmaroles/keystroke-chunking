@@ -1,0 +1,2 @@
+kill `ps | grep "jupyter" | cut -f 1 -d " "`
+killall "socat"
